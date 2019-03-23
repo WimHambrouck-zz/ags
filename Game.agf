@@ -73,7 +73,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName xml:space="preserve">Dirk's Adventure</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>3</AudioIndexer>
+      <AudioIndexer>4</AudioIndexer>
       <BuildTargets xml:space="preserve">Windows, Linux</BuildTargets>
       <RenderAtScreenResolution>UserDefined</RenderAtScreenResolution>
     </Settings>
@@ -646,8 +646,12 @@
         <SubFolders />
         <UnloadedRooms>
           <UnloadedRoom>
-            <Number>1</Number>
+            <Number>2</Number>
             <Description IsNull="True" />
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>1</Number>
+            <Description>discotheek</Description>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -1053,8 +1057,8 @@
             <ThinkingView>3</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>1</StartingRoom>
-            <StartX>230</StartX>
-            <StartY>170</StartY>
+            <StartX>285</StartX>
+            <StartY>236</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>5</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
@@ -1070,6 +1074,46 @@
             <DiagonalLoops>True</DiagonalLoops>
             <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
             <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>1</ID>
+            <ScriptName>cBeeGees</ScriptName>
+            <RealName xml:space="preserve">Bee Gees</RealName>
+            <NormalView>4</NormalView>
+            <SpeechView>0</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>1</StartingRoom>
+            <StartX>87</StartX>
+            <StartY>240</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>12</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>True</AdjustVolumeWithScaling>
             <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
             <Properties />
             <Interactions>
@@ -1573,6 +1617,11 @@
               <Sprite Slot="28" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
               <Sprite Slot="29" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
               <Sprite Slot="30" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
+              <Sprite Slot="31" Width="175" Height="139" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\temp\Josse\disco\bee_gees_char.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
         </SubFolders>
@@ -1836,6 +1885,25 @@
               </Loop>
             </Loops>
           </View>
+          <View>
+            <ID>4</ID>
+            <Name>beeGeeBasic</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>31</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
         </Views>
       </ViewFolder>
     </Views>
@@ -1900,7 +1968,20 @@
         <SubFolders>
           <AudioClipFolder Name="Music">
             <SubFolders />
-            <AudioClips />
+            <AudioClips>
+              <AudioClip>
+                <SourceFileName>C:\temp\Josse\music\tragedy_bee_gees.mp3</SourceFileName>
+                <ScriptName>aTragedy_bee_gees</ScriptName>
+                <Index>4</Index>
+                <Type>2</Type>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <FileType>MP3</FileType>
+                <DefaultVolume>-1</DefaultVolume>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <FileLastModifiedDate>2019-03-23 15:09:04Z</FileLastModifiedDate>
+              </AudioClip>
+            </AudioClips>
             <AudioClipFolder>
               <DefaultVolume>100</DefaultVolume>
               <DefaultPriority>Inherit</DefaultPriority>
